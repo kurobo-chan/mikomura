@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.mediabox {
+position: relative;
+        }
+	.blur.ls-blur-up-is-loading,
+	.blur.lazyload:not([src]) {
+		visibility: hidden;
+	}
+
+	.ls-blur-up-img,.blur {
+		  position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+	}
+
+	.ls-blur-up-img {
+		filter: blur(8px);
+		opacity: 1;
+		transition: opacity 4000ms, filter 4500ms;
+	}
+
+	.ls-blur-up-img.ls-inview.ls-original-loaded {
+		opacity: 0;
+		filter: blur(0px);
+	}
